@@ -10,10 +10,10 @@
 using System;
 namespace Issen
 {
-	public class Player:Minion
+	public class Enemy:Minion
 	{
-		public Player(int hp, int strength) : base(hp, strength) {}
-		public Player() : base() {}
+		public Enemy(int hp, int strength) : base(hp, strength) {}
+		public Enemy() : base() {}
 	}
 }
 

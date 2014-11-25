@@ -14,6 +14,7 @@ namespace Issen
 	{
 		const int DefaultHp = 50;
 		const int DefaultStrength = 1;
+		const int DefaultArmor = 0;
 		private int hp;
 		private int strength;
 
@@ -22,6 +23,7 @@ namespace Issen
 			hp = DefaultHp;
 			MaxHp = hp;
 			strength = DefaultStrength;
+			this.Armor = DefaultArmor;
 		}
 
 		public Minion (int hp, int strength)
@@ -29,6 +31,7 @@ namespace Issen
 			this.hp = hp;
 			this.strength = strength;
 			MaxHp = hp;
+			this.Armor = DefaultArmor;
 		}
 
 		public int MaxHp { get; private set; }
@@ -47,6 +50,8 @@ namespace Issen
 				return strength + (MaxHp -  hp);
 			}
 		}
+
+		public int Armor { get; set; }
 
 		public void DecideStrength(int strength) {
 			this.strength = strength;

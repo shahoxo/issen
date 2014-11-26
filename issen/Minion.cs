@@ -36,7 +36,8 @@ namespace Issen
 
 		public int MaxHp { get; private set; }
 
-		public int Hp {
+		public int Hp
+		{
 			get {
 				return hp;
 			}
@@ -45,7 +46,8 @@ namespace Issen
 			}
 		}
 
-		public int Strength {
+		public int Strength
+		{
 			get {
 				return strength + (MaxHp -  hp);
 			}
@@ -53,9 +55,12 @@ namespace Issen
 
 		public int Armor { get; set; }
 
-		public void DecideStrength(int strength) {
-			this.strength = strength;
+		public void DecideCard(int card)
+		{
+			this.strength = card;
 		}
+
+		public virtual void Think(Battle battle) {}
 	}
 }
 

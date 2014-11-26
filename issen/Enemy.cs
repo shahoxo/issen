@@ -14,6 +14,12 @@ namespace Issen
 	{
 		public Enemy(int hp, int strength) : base(hp, strength) {}
 		public Enemy() : base() {}
+
+		public override void Think(Battle battle)
+		{
+			// NOTE: battleの履歴や対戦相手の情報から次の手を考える でも面倒なのでランダム
+			DecideCard(new Random().Next(1, 10));
+		}
 	}
 }
 
